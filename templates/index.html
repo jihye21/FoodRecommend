@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>메뉴 추천</title>
+</head>
+
+<body>
+    <h1>좋아하는 음식을 골라주세요</h1>
+    <form method="POST">
+        {% for food in foods %}
+            <label>
+                <input type="checkbox" name="foods" value = "{{ food }}"
+                {% if food in selected_foods %}checked{% endif %}>
+                {{ food }}
+            </label><br>
+        {% endfor %}
+        <button type = "submit">추천 받기</button>
+    </form>
+
+    {% if recommendations %}
+        <h2>추천 메뉴</h2>
+        <ul>
+            {% for food, score in recommendations %}
+                <li>{{ food }} (유사도: {{ '%.2f'|format(score) }})</li>
+                {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
