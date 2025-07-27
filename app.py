@@ -1,24 +1,13 @@
 from flask import Flask, render_template, request
 import json
+import random
 
 with open("sample_recipes.json", "r", encoding="utf-8") as f:
     foods = json.load(f)
 
 app = Flask(__name__)
 
-
-#foods = {
-#    "치킨": {"고기", "튀김", "매운맛", "한국식"},
-#    "양념치킨": {"고기", "튀김", "매운맛", "한국식", "달콤"},
- #   "된장찌개": {"찌개", "국물", "한국식", "구수한맛", "채소"},
- #   "순두부찌개": {"찌개", "국물", "매운맛", "한국식", "부드러운"},
-  #  "김치찌개": {"찌개", "국물", "매운맛", "한국식", "부드러운"},
-   # "피자": {"고기", "빵", "양식", "치즈", "기름진"},
-    #"파스타": {"면", "양식", "기름진", "치즈"},
-    #"비빔밥": {"밥", "한국식", "채소", "매운맛", "고기"},
-    #"초밥": {"밥", "생선", "일식", "신선한"},
-    #"떡볶이": {"떡", "매운맛", "간식", "한국식"},
-#}
+NUM_RANDOM_OPTIONS = 5
 
 def jaccard_similarity(set1, set2):
     intersection = len(set1 & set2)
@@ -28,6 +17,7 @@ def jaccard_similarity(set1, set2):
 def get_tags(food_name, foods):
     for f in foods:
         if f["food"] == food_name:
+            print(f"[get_tags] 찾음: {food_name} → 태그: {f['tags']}")
             return set(f["tags"])
     return set()
 
@@ -40,7 +30,13 @@ def recommend_foods(favorite_foods, foods, top_n=5):
     for f in foods:
         if f["food"] in favorite_foods:
             continue
+
+        print(f"[비교 대상] {f['food']} 태그: {f['tags']}")
+        print("교집합:", user_tags & set(f["tags"]))
+        print("유사도:", jaccard_similarity(user_tags, set(f["tags"])))
+        print("선택한 항목: ", user_tags )
         score = jaccard_similarity(user_tags, set(f["tags"]))
+       
         scores.append((f["food"], score))
 
     scores.sort(key=lambda x: x[1], reverse=True)
@@ -54,7 +50,12 @@ def index():
     if request.method =="POST":
         selected_foods = request.form.getlist("foods")
         recommendations = recommend_foods(selected_foods, foods)
-    return render_template("index.html", foods=[f["food"] for f in foods], recommendations=recommendations, selected_foods=selected_foods)
+        displayed_foods =  [f for f in foods if f["food"] in selected_foods]   
+    else:
+        #GET
+        displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)
+    
+    return render_template("index.html", foods=displayed_foods, recommendations=recommendations, selected_foods=selected_foods)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)

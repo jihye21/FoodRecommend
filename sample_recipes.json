@@ -1,15 +1,15 @@
 [
-  {"food": "김치찌개", "tags": ["한식", "발효", "국물", "매운맛"], "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/kimchi-jjigae-2295268_1280.jpg"},
-  {"food": "된장찌개", "tags": ["한식", "발효", "국물"], "image": "https://cdn.pixabay.com/photo/2017/01/06/18/12/korean-1953947_1280.jpg"},
-  {"food": "불고기", "tags": ["한식", "고기", "달콤한"], "image": "https://cdn.pixabay.com/photo/2017/06/22/22/18/bulgogi-2431829_1280.jpg"},
-  {"food": "비빔밥", "tags": ["한식", "밥", "채소", "매운맛"], "image": "https://cdn.pixabay.com/photo/2018/05/25/22/23/bibimbap-3429416_1280.jpg"},
-  {"food": "떡볶이", "tags": ["한식", "매운맛", "간식"], "image": "https://cdn.pixabay.com/photo/2018/11/10/09/12/korean-3802361_1280.jpg"},
-  {"food": "삼겹살", "tags": ["한식", "고기", "구운"], "image": "https://cdn.pixabay.com/photo/2017/11/07/16/36/pork-2929194_1280.jpg"},
-  {"food": "냉면", "tags": ["한식", "면", "차가운"], "image": "https://cdn.pixabay.com/photo/2017/04/06/12/36/naengmyeon-2203286_1280.jpg"},
+  {"food": "김치찌개", "tags": ["한식", "발효", "국물", "매운맛"], "image": "img/kimchi_soup.jpg"},
+  {"food": "된장찌개", "tags": ["한식", "발효", "국물"], "image": "img/miso_soup.jpg"},
+  {"food": "불고기", "tags": ["한식", "고기", "달콤한"], "image": "https://cdn.pixabay.com/photo/2017/07/19/03/13/pot-2517765_1280.jpg"},
+  {"food": "비빔밥", "tags": ["한식", "밥", "채소", "매운맛"], "image": "https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%ED%9D%B0%EC%83%89-%EC%84%B8%EB%9D%BC%EB%AF%B9-%EA%B7%B8%EB%A6%87%EC%97%90-%EC%A1%B0%EB%A6%AC-%EB%90%9C-%EC%9D%8C%EC%8B%9D-diDja86YL_M"},
+  {"food": "떡볶이", "tags": ["한식", "매운맛", "간식"], "image": "https://cdn.pixabay.com/photo/2020/10/14/06/42/toppokki-5653412_1280.jpg"},
+  {"food": "삼겹살", "tags": ["한식", "고기", "구운"], "image": "https://pixabay.com/photos/pork-belly-korean-food-food-cooking-1014180/"},
+  {"food": "냉면", "tags": ["한식", "면", "차가운"], "image": "https://pixabay.com/photos/chop-suey-meal-dish-stir-food-5666461/"},
   {"food": "잡채", "tags": ["한식", "면", "채소"], "image": "https://cdn.pixabay.com/photo/2020/02/02/06/50/japchae-4816226_1280.jpg"},
-  {"food": "파스타", "tags": ["양식", "면", "치즈"], "image": "https://cdn.pixabay.com/photo/2017/09/04/11/18/spaghetti-2719056_1280.jpg"},
-  {"food": "피자", "tags": ["양식", "빵", "치즈", "기름진"], "image": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg"},
-  {"food": "마라탕", "tags": ["중식", "매운맛", "국물", "향신료"], "image": "https://cdn.pixabay.com/photo/2021/01/21/15/38/malatang-5932346_1280.jpg"},
+  {"food": "파스타", "tags": ["양식", "면", "치즈"], "image": "https://cdn.pixabay.com/photo/2019/12/25/13/23/pasta-4718583_1280.jpg"},
+  {"food": "피자", "tags": ["양식", "빵", "치즈", "기름진"], "image": "https://pixabay.com/photos/pizza-mozzarella-food-5661748/"},
+  {"food": "마라탕", "tags": ["중식", "매운맛", "국물", "향신료"], "image": "https://www.freepik.com/premium-photo/high-angle-view-food-table_101434970.htm#fromView=keyword&page=1&position=20&uuid=1e81e74a-4d40-48ff-bd5d-e7347568ebfb&query=Mala+Tang"},
   {"food": "초밥", "tags": ["일식", "생선", "밥", "신선한"], "image": "https://cdn.pixabay.com/photo/2017/01/14/12/59/sushi-1972064_1280.jpg"},
   {"food": "탕수육", "tags": ["중식", "튀김", "달콤한"], "image": "https://cdn.pixabay.com/photo/2019/05/23/16/47/sweet-and-sour-pork-4227690_1280.jpg"},
   {"food": "순두부찌개", "tags": ["한식", "매운맛", "국물", "부드러운"], "image": "https://cdn.pixabay.com/photo/2020/11/07/14/54/korean-food-5720074_1280.jpg"},
@@ -29,9 +29,8 @@
   {"food": "바나나우유", "tags": ["음료", "달콤한", "차가운"], "image": "https://cdn.pixabay.com/photo/2016/02/19/11/53/milk-1207452_1280.jpg"},
   {"food": "호박죽", "tags": ["한식", "죽", "달콤한", "부드러운"], "image": "https://cdn.pixabay.com/photo/2016/01/21/15/30/pumpkin-1150310_1280.jpg"},
   {"food": "고로케", "tags": ["간식", "튀김", "달콤한"], "image": "https://cdn.pixabay.com/photo/2017/05/08/07/03/croquette-2298103_1280.jpg"},
-  
+    
   {"food": "찜닭", "tags": ["한식", "고기", "달콤한", "매운맛"], "image": "https://cdn.pixabay.com/photo/2018/06/05/17/01/jjimdak-3450613_1280.jpg"},
-  {"food": "라즈베리 타르트", "tags": ["디저트", "빵", "달콤한"], "image": "https://cdn.pixabay.com/photo/2017/08/10/07/46/tart-2611695_1280.jpg"},
   {"food": "샤브샤브", "tags": ["일식", "고기", "국물", "가벼운"], "image": "https://cdn.pixabay.com/photo/2017/12/20/11/44/shabu-shabu-3032616_1280.jpg"},
   {"food": "만두", "tags": ["간식", "찜", "고기"], "image": "https://cdn.pixabay.com/photo/2017/03/10/23/07/dumplings-2139127_1280.jpg"},
   {"food": "카페라떼", "tags": ["음료", "따뜻한", "커피"], "image": "https://cdn.pixabay.com/photo/2017/01/20/00/30/coffee-1995056_1280.jpg"},
@@ -62,7 +61,7 @@
   {"food": "해물파전", "tags": ["한식", "해산물", "부침", "기름진"], "image": "https://cdn.pixabay.com/photo/2017/08/09/18/50/seafood-2610545_1280.jpg"},
   {"food": "냉모밀", "tags": ["일식", "면", "차가운", "가벼운"], "image": "https://cdn.pixabay.com/photo/2016/07/27/16/54/soba-1545394_1280.jpg"},
   {"food": "에그타르트", "tags": ["디저트", "달콤한", "부드러운"], "image": "https://cdn.pixabay.com/photo/2016/03/05/22/10/egg-tart-1239614_1280.jpg"}
-  {"food": "육회비빔밥", "tags": ["한식", "밥", "고기", "매운맛", "신선한"], "image": "https://cdn.pixabay.com/photo/2021/05/30/17/51/yukhoe-6294579_1280.jpg"},
+  ,{"food": "육회비빔밥", "tags": ["한식", "밥", "고기", "매운맛", "신선한"], "image": "https://cdn.pixabay.com/photo/2021/05/30/17/51/yukhoe-6294579_1280.jpg"},
   {"food": "새우튀김", "tags": ["일식", "해산물", "튀김", "바삭한"], "image": "https://cdn.pixabay.com/photo/2017/05/08/07/03/shrimp-2298104_1280.jpg"},
   {"food": "냉채족발", "tags": ["한식", "고기", "차가운", "매운맛"], "image": "https://cdn.pixabay.com/photo/2022/06/17/15/55/jokbal-7268596_1280.jpg"},
   {"food": "코코넛 쉬림프", "tags": ["양식", "해산물", "튀김", "달콤한"], "image": "https://cdn.pixabay.com/photo/2021/03/10/18/17/coconut-shrimp-6084694_1280.jpg"},
@@ -124,7 +123,7 @@
   {"food": "불닭치즈볶음밥", "tags": ["한식", "밥", "고기", "치즈", "매운맛"], "image": "https://cdn.pixabay.com/photo/2021/07/01/12/25/buldak-6378342_1280.jpg"},
   {"food": "무쌈말이", "tags": ["한식", "채소", "가벼운", "쌈"], "image": "https://cdn.pixabay.com/photo/2018/03/20/21/28/korean-food-3244232_1280.jpg"},
   {"food": "바지락칼국수", "tags": ["한식", "면", "해산물", "국물", "담백한"], "image": "https://cdn.pixabay.com/photo/2021/02/08/15/58/korean-food-5992767_1280.jpg"}
-  {"food": "곤드레밥", "tags": ["한식", "밥", "건강식", "채소", "담백한"], "image": "https://cdn.pixabay.com/photo/2023/03/11/06/00/korean-food-7842505_1280.jpg"},
+  ,{"food": "곤드레밥", "tags": ["한식", "밥", "건강식", "채소", "담백한"], "image": "https://cdn.pixabay.com/photo/2023/03/11/06/00/korean-food-7842505_1280.jpg"},
   {"food": "잡채밥", "tags": ["중식", "밥", "면", "야채", "간장맛"], "image": "https://cdn.pixabay.com/photo/2018/11/20/15/06/japchae-3826103_1280.jpg"},
   {"food": "부추전", "tags": ["한식", "부침", "채소", "간식"], "image": "https://cdn.pixabay.com/photo/2020/06/28/09/24/korean-food-5349930_1280.jpg"},
   {"food": "호떡", "tags": ["한식", "디저트", "간식", "달콤한", "겨울"], "image": "https://cdn.pixabay.com/photo/2018/01/01/07/51/hotteok-3056194_1280.jpg"},
@@ -145,7 +144,7 @@
   {"food": "치즈스틱", "tags": ["간식", "치즈", "튀김", "고소한"], "image": "https://cdn.pixabay.com/photo/2021/08/13/08/51/mozzarella-sticks-6542823_1280.jpg"},
   {"food": "콩국수", "tags": ["한식", "면", "차가운", "고소한", "건강식"], "image": "https://cdn.pixabay.com/photo/2022/07/04/11/19/kongguksu-7299575_1280.jpg"},
   {"food": "초밥세트", "tags": ["일식", "밥", "해산물", "신선한", "간장"], "image": "https://cdn.pixabay.com/photo/2017/02/08/23/58/sushi-2047807_1280.jpg"}
-  {"food": "감자튀김", "tags": ["간식", "감자", "튀김", "패스트푸드", "바삭한"], "image": "https://cdn.pixabay.com/photo/2018/07/18/20/58/french-fries-3547394_1280.jpg"},
+  ,{"food": "감자튀김", "tags": ["간식", "감자", "튀김", "패스트푸드", "바삭한"], "image": "https://cdn.pixabay.com/photo/2018/07/18/20/58/french-fries-3547394_1280.jpg"},
   {"food": "오렌지주스", "tags": ["음료", "과일", "시원한", "비타민C"], "image": "https://cdn.pixabay.com/photo/2016/08/24/17/45/orange-juice-1614822_1280.jpg"},
   {"food": "토스트", "tags": ["아침식사", "빵", "달콤한", "간편식"], "image": "https://cdn.pixabay.com/photo/2016/04/01/09/10/bread-1292914_1280.jpg"},
   {"food": "야채죽", "tags": ["한식", "죽", "채소", "담백한", "건강식"], "image": "https://cdn.pixabay.com/photo/2020/04/23/04/01/rice-plant-5078841_1280.jpg"},
@@ -172,7 +171,6 @@
   {"food": "떡꼬치", "tags": ["한식", "떡", "간식", "매운맛", "달콤한"], "image": "https://cdn.pixabay.com/photo/2023/02/23/13/38/tteokbokki-7809054_1280.jpg"},
   {"food": "페퍼로니피자", "tags": ["양식", "피자", "고기", "치즈", "짭짤한"], "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/pizza-1239077_1280.jpg"},
   {"food": "미역국", "tags": ["한식", "국물", "해조류", "소고기", "건강식"], "image": "https://cdn.pixabay.com/photo/2021/03/04/05/19/miyeokguk-6067687_1280.jpg"},
-  {"food": "연어샐러드", "tags": ["샐러드", "생선", "건강식", "신선한", "가벼운"], "image": "https://cdn.pixabay.com/photo/2020/05/02/16/20/salad-5121743_1280.jpg"},
 
   {"food": "바질파스타", "tags": ["양식", "면", "허브", "치즈", "가벼운"], "image": "https://cdn.pixabay.com/photo/2018/10/16/18/43/spaghetti-3752347_1280.jpg"},
   {"food": "불고기쌈밥", "tags": ["한식", "고기", "쌈", "밥", "건강식"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992768_1280.jpg"},
@@ -186,25 +184,19 @@
   {"food": "허니버터감자칩", "tags": ["간식", "감자", "달콤한", "바삭한", "스낵"], "image": "https://cdn.pixabay.com/photo/2020/12/13/14/27/snack-5828450_1280.jpg"},
   {"food": "피넛버터토스트", "tags": ["아침식사", "간식", "빵", "고소한", "간편식"], "image": "https://cdn.pixabay.com/photo/2017/05/22/22/22/peanut-butter-toast-2337697_1280.jpg"},
   {"food": "고추장불고기", "tags": ["한식", "고기", "매운맛", "양념", "밥반찬"], "image": "https://cdn.pixabay.com/photo/2020/05/07/12/14/bulgogi-5140012_1280.jpg"},
-  {"food": "파인애플볶음밥", "tags": ["아시아식", "밥", "과일", "달콤한", "이국적인"], "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/rice-2294355_1280.jpg"},
   {"food": "코울슬로", "tags": ["샐러드", "양식", "채소", "고소한", "사이드"], "image": "https://cdn.pixabay.com/photo/2016/06/21/03/29/coleslaw-1478886_1280.jpg"},
   {"food": "연유토스트", "tags": ["디저트", "빵", "달콤한", "연유", "간식"], "image": "https://cdn.pixabay.com/photo/2022/02/04/05/29/bread-6992112_1280.jpg"},
-  {"food": "가지볶음", "tags": ["한식", "채소", "반찬", "담백한", "건강식"], "image": "https://cdn.pixabay.com/photo/2023/07/15/18/25/eggplant-8127789_1280.jpg"},
   {"food": "굴국밥", "tags": ["한식", "밥", "국물", "해산물", "담백한"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992771_1280.jpg"},
-  {"food": "콘치즈", "tags": ["한식", "사이드", "치즈", "옥수수", "달콤한"], "image": "https://cdn.pixabay.com/photo/2020/01/12/09/53/corn-cheese-4759583_1280.jpg"},
   {"food": "바나나우유", "tags": ["음료", "과일", "달콤한", "우유", "간식"], "image": "https://cdn.pixabay.com/photo/2020/04/12/10/42/banana-milk-5033659_1280.jpg"},
 
   {"food": "꽈리고추볶음", "tags": ["한식", "채소", "매운맛", "반찬", "담백한"], "image": "https://cdn.pixabay.com/photo/2021/05/16/08/11/chili-peppers-6257054_1280.jpg"},
   {"food": "모닝빵샌드위치", "tags": ["간편식", "빵", "계란", "아침식사", "고소한"], "image": "https://cdn.pixabay.com/photo/2020/04/14/08/25/sandwich-5040104_1280.jpg"},
-  {"food": "김치전", "tags": ["한식", "부침", "김치", "매운맛", "간식"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992769_1280.jpg"},
   {"food": "두부김치", "tags": ["한식", "두부", "김치", "안주", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2017/04/30/20/30/tofu-2275326_1280.jpg"},
   {"food": "마라샹궈", "tags": ["중식", "매운맛", "향신료", "볶음", "이국적인"], "image": "https://cdn.pixabay.com/photo/2020/11/09/04/31/mala-5724665_1280.jpg"},
   {"food": "모듬튀김", "tags": ["한식", "튀김", "바삭한", "야채", "오징어"], "image": "https://cdn.pixabay.com/photo/2021/03/17/13/14/tempura-6101913_1280.jpg"},
-  {"food": "돼지불백", "tags": ["한식", "고기", "양념", "매콤한", "밥반찬"], "image": "https://cdn.pixabay.com/photo/2022/03/07/15/48/korean-food-7053486_1280.jpg"},
   {"food": "메밀국수", "tags": ["한식", "면", "차가운", "담백한", "건강식"], "image": "https://cdn.pixabay.com/photo/2022/01/14/12/03/soba-noodles-6936585_1280.jpg"},
   {"food": "라즈베리타르트", "tags": ["디저트", "과일", "달콤한", "타르트", "베이커리"], "image": "https://cdn.pixabay.com/photo/2020/01/08/18/20/raspberry-tart-4750565_1280.jpg"},
-  {"food": "크림카레우동", "tags": ["퓨전", "면", "카레", "크림", "부드러운"], "image": "https://cdn.pixabay.com/photo/2020/09/11/05/14/udon-5561612_1280.jpg"},
- 
+
   {"food": "크랜베리오트밀", "tags": ["아침식사", "곡물", "건강식", "과일", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2019/01/02/14/23/oatmeal-3903088_1280.jpg"},
   {"food": "닭가슴살스테이크", "tags": ["건강식", "고기", "닭", "고단백", "식단관리"], "image": "https://cdn.pixabay.com/photo/2020/04/05/19/48/chicken-5004367_1280.jpg"},
   {"food": "애호박전", "tags": ["한식", "전", "채소", "담백한", "반찬"], "image": "https://cdn.pixabay.com/photo/2023/08/10/06/55/zucchini-8180314_1280.jpg"},
@@ -213,7 +205,6 @@
   {"food": "바질페스토파스타", "tags": ["양식", "면", "허브", "건강식", "올리브오일"], "image": "https://cdn.pixabay.com/photo/2019/09/21/22/00/spaghetti-4492820_1280.jpg"},
   {"food": "삼겹살김밥", "tags": ["한식", "김밥", "고기", "밥", "퓨전"], "image": "https://cdn.pixabay.com/photo/2021/04/14/09/38/kimbap-6177181_1280.jpg"},
   {"food": "쫄면", "tags": ["한식", "면", "매운맛", "채소", "새콤한"], "image": "https://cdn.pixabay.com/photo/2020/12/04/01/16/korean-food-5800724_1280.jpg"},
-  {"food": "크림리조또", "tags": ["양식", "밥", "치즈", "부드러운", "크림"], "image": "https://cdn.pixabay.com/photo/2020/01/11/13/10/risotto-4756966_1280.jpg"},
   {"food": "홍시", "tags": ["과일", "가을", "달콤한", "디저트", "한국식"], "image": "https://cdn.pixabay.com/photo/2019/10/26/04/50/persimmon-4578564_1280.jpg"},
 
   {"food": "감자전", "tags": ["한식", "전", "감자", "간식", "바삭한"], "image": "https://cdn.pixabay.com/photo/2017/05/23/21/57/potato-pancakes-2339175_1280.jpg"},
@@ -227,27 +218,15 @@
   {"food": "망고빙수", "tags": ["디저트", "빙수", "과일", "달콤한", "시원한"], "image": "https://cdn.pixabay.com/photo/2020/06/24/17/33/mango-5337582_1280.jpg"},
   {"food": "크림카레돈까스", "tags": ["퓨전", "고기", "튀김", "카레", "크림"], "image": "https://cdn.pixabay.com/photo/2022/03/23/02/36/pork-cutlet-7085946_1280.jpg"},
  
-  {"food": "피넛버터토스트", "tags": ["아침식사", "간식", "빵", "고소한", "간편식"], "image": "https://cdn.pixabay.com/photo/2017/05/22/22/22/peanut-butter-toast-2337697_1280.jpg"},
   {"food": "고추장불고기", "tags": ["한식", "고기", "매운맛", "양념", "밥반찬"], "image": "https://cdn.pixabay.com/photo/2020/05/07/12/14/bulgogi-5140012_1280.jpg"},
-  {"food": "파인애플볶음밥", "tags": ["아시아식", "밥", "과일", "달콤한", "이국적인"], "image": "https://cdn.pixabay.com/photo/2017/05/07/08/56/rice-2294355_1280.jpg"},
-  {"food": "코울슬로", "tags": ["샐러드", "양식", "채소", "고소한", "사이드"], "image": "https://cdn.pixabay.com/photo/2016/06/21/03/29/coleslaw-1478886_1280.jpg"},
-  {"food": "연유토스트", "tags": ["디저트", "빵", "달콤한", "연유", "간식"], "image": "https://cdn.pixabay.com/photo/2022/02/04/05/29/bread-6992112_1280.jpg"},
   {"food": "가지볶음", "tags": ["한식", "채소", "반찬", "담백한", "건강식"], "image": "https://cdn.pixabay.com/photo/2023/07/15/18/25/eggplant-8127789_1280.jpg"},
-  {"food": "굴국밥", "tags": ["한식", "밥", "국물", "해산물", "담백한"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992771_1280.jpg"},
-  {"food": "콘치즈", "tags": ["한식", "사이드", "치즈", "옥수수", "달콤한"], "image": "https://cdn.pixabay.com/photo/2020/01/12/09/53/corn-cheese-4759583_1280.jpg"},
   {"food": "바나나우유", "tags": ["음료", "과일", "달콤한", "우유", "간식"], "image": "https://cdn.pixabay.com/photo/2020/04/12/10/42/banana-milk-5033659_1280.jpg"},
 
-  {"food": "꽈리고추볶음", "tags": ["한식", "채소", "매운맛", "반찬", "담백한"], "image": "https://cdn.pixabay.com/photo/2021/05/16/08/11/chili-peppers-6257054_1280.jpg"},
-  {"food": "모닝빵샌드위치", "tags": ["간편식", "빵", "계란", "아침식사", "고소한"], "image": "https://cdn.pixabay.com/photo/2020/04/14/08/25/sandwich-5040104_1280.jpg"},
   {"food": "김치전", "tags": ["한식", "부침", "김치", "매운맛", "간식"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992769_1280.jpg"},
   {"food": "두부김치", "tags": ["한식", "두부", "김치", "안주", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2017/04/30/20/30/tofu-2275326_1280.jpg"},
   {"food": "마라샹궈", "tags": ["중식", "매운맛", "향신료", "볶음", "이국적인"], "image": "https://cdn.pixabay.com/photo/2020/11/09/04/31/mala-5724665_1280.jpg"},
   {"food": "모듬튀김", "tags": ["한식", "튀김", "바삭한", "야채", "오징어"], "image": "https://cdn.pixabay.com/photo/2021/03/17/13/14/tempura-6101913_1280.jpg"},
-  {"food": "돼지불백", "tags": ["한식", "고기", "양념", "매콤한", "밥반찬"], "image": "https://cdn.pixabay.com/photo/2022/03/07/15/48/korean-food-7053486_1280.jpg"},
-  {"food": "메밀국수", "tags": ["한식", "면", "차가운", "담백한", "건강식"], "image": "https://cdn.pixabay.com/photo/2022/01/14/12/03/soba-noodles-6936585_1280.jpg"},
-  {"food": "라즈베리타르트", "tags": ["디저트", "과일", "달콤한", "타르트", "베이커리"], "image": "https://cdn.pixabay.com/photo/2020/01/08/18/20/raspberry-tart-4750565_1280.jpg"},
-  {"food": "크림카레우동", "tags": ["퓨전", "면", "카레", "크림", "부드러운"], "image": "https://cdn.pixabay.com/photo/2020/09/11/05/14/udon-5561612_1280.jpg"}
-  ,{"food": "프렌치토스트", "tags": ["아침식사", "빵", "달콤한", "계란", "디저트"], "image": "https://cdn.pixabay.com/photo/2021/03/30/16/18/french-toast-6138941_1280.jpg"},
+  {"food": "프렌치토스트", "tags": ["아침식사", "빵", "달콤한", "계란", "디저트"], "image": "https://cdn.pixabay.com/photo/2021/03/30/16/18/french-toast-6138941_1280.jpg"},
   {"food": "오징어덮밥", "tags": ["한식", "밥", "해산물", "매운맛", "간편식"], "image": "https://cdn.pixabay.com/photo/2021/02/08/16/00/korean-food-5992766_1280.jpg"},
   {"food": "크림브륄레", "tags": ["디저트", "프랑스식", "달콤한", "부드러운", "구운"], "image": "https://cdn.pixabay.com/photo/2016/03/05/19/11/creme-brulee-1239245_1280.jpg"},
   {"food": "비프스튜", "tags": ["양식", "고기", "국물", "건강식", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2021/09/25/17/15/beef-stew-6654734_1280.jpg"},
@@ -280,7 +259,6 @@
   {"food": "호떡", "tags": ["간식", "빵", "달콤한", "한식", "겨울"], "image": "https://cdn.pixabay.com/photo/2019/01/11/12/17/hotteok-3928500_1280.jpg"},
 
   {"food": "닭볶음탕", "tags": ["한식", "고기", "매운맛", "국물", "저녁"], "image": "https://cdn.pixabay.com/photo/2019/03/19/17/15/korean-food-4067737_1280.jpg"},
-  {"food": "마라샹궈", "tags": ["중식", "매운맛", "볶음", "해산물", "고기"], "image": "https://cdn.pixabay.com/photo/2019/09/23/06/40/malaxiangguo-4491147_1280.jpg"},
   {"food": "유부초밥", "tags": ["일식", "밥", "간단한", "간식", "해산물"], "image": "https://cdn.pixabay.com/photo/2017/05/28/16/28/inari-sushi-2344420_1280.jpg"},
   {"food": "바나나팬케이크", "tags": ["아침식사", "빵", "달콤한", "과일", "디저트"], "image": "https://cdn.pixabay.com/photo/2016/11/18/16/35/pancakes-1835476_1280.jpg"},
   {"food": "떡갈비", "tags": ["한식", "고기", "구운", "달콤한", "저녁"], "image": "https://cdn.pixabay.com/photo/2022/05/25/08/33/grilled-pork-patty-7216492_1280.jpg"},
@@ -288,9 +266,7 @@
   {"food": "야채튀김", "tags": ["튀김", "채소", "간식", "일식", "바삭한"], "image": "https://cdn.pixabay.com/photo/2016/02/19/10/00/tempura-1209865_1280.jpg"},
   {"food": "유자차", "tags": ["음료", "차", "과일", "한국식", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2017/05/31/17/23/yuzu-tea-2351688_1280.jpg"},
   {"food": "갈릭새우", "tags": ["해산물", "고기", "마늘", "양식", "안주"], "image": "https://cdn.pixabay.com/photo/2017/06/16/11/37/shrimp-2402463_1280.jpg"},
-  {"food": "쫄면", "tags": ["한식", "면", "매운맛", "채소", "새콤한"], "image": "https://cdn.pixabay.com/photo/2020/12/04/01/16/korean-food-5800724_1280.jpg"}
   
-  ,{"food": "고추장불고기", "tags": ["한식", "고기", "매운맛", "구이", "저녁"], "image": "https://cdn.pixabay.com/photo/2021/10/25/14/22/korean-food-6743925_1280.jpg"},
   {"food": "단호박죽", "tags": ["한식", "죽", "부드러운", "달콤한", "건강식"], "image": "https://cdn.pixabay.com/photo/2021/03/03/17/11/pumpkin-6062707_1280.jpg"},
   {"food": "파르페", "tags": ["디저트", "달콤한", "과일", "아이스크림", "컵디저트"], "image": "https://cdn.pixabay.com/photo/2017/03/15/15/39/parfait-2149229_1280.jpg"},
   {"food": "감자탕", "tags": ["한식", "국물", "고기", "매운맛", "뼈"], "image": "https://cdn.pixabay.com/photo/2020/05/05/09/27/korean-food-5129923_1280.jpg"},
@@ -311,8 +287,7 @@
   {"food": "샤브샤브", "tags": ["일식", "고기", "채소", "국물", "건강식"], "image": "https://cdn.pixabay.com/photo/2017/03/16/15/00/shabu-shabu-2158310_1280.jpg"},
   {"food": "메밀국수", "tags": ["한식", "면", "시원한", "여름", "국수"], "image": "https://cdn.pixabay.com/photo/2017/07/27/19/29/noodles-2543990_1280.jpg"},
   {"food": "삼색나물", "tags": ["한식", "채소", "반찬", "건강식", "간단한"], "image": "https://cdn.pixabay.com/photo/2018/02/15/13/40/korean-3152639_1280.jpg"}
-  {"food": "계란찜", "tags": ["한식", "계란", "부드러운", "반찬", "간단한"], "image": "https://cdn.pixabay.com/photo/2017/03/23/20/24/steamed-egg-2168197_1280.jpg"},
-  {"food": "바질페스토파스타", "tags": ["이탈리아식", "면", "소스", "허브", "양식"], "image": "https://cdn.pixabay.com/photo/2016/11/29/04/23/pesto-1869713_1280.jpg"},
+  ,{"food": "바질페스토파스타", "tags": ["이탈리아식", "면", "소스", "허브", "양식"], "image": "https://cdn.pixabay.com/photo/2016/11/29/04/23/pesto-1869713_1280.jpg"},
   {"food": "감자튀김", "tags": ["간식", "튀김", "감자", "바삭한", "패스트푸드"], "image": "https://cdn.pixabay.com/photo/2016/03/05/19/02/french-fries-1238575_1280.jpg"},
   {"food": "꼬치구이", "tags": ["고기", "간식", "구이", "야식", "바비큐"], "image": "https://cdn.pixabay.com/photo/2017/03/01/18/11/food-2109277_1280.jpg"},
   {"food": "생선구이", "tags": ["해산물", "구이", "한식", "저녁", "건강식"], "image": "https://cdn.pixabay.com/photo/2015/06/18/20/27/fish-815034_1280.jpg"},
@@ -329,7 +304,7 @@
   {"food": "부추전", "tags": ["한식", "전", "간식", "채소", "부침개"], "image": "https://cdn.pixabay.com/photo/2019/01/21/18/44/food-3947895_1280.jpg"},
   {"food": "크림치즈베이글", "tags": ["아침식사", "빵", "치즈", "간단한", "양식"], "image": "https://cdn.pixabay.com/photo/2019/11/17/22/27/bagel-4630278_1280.jpg"},
   {"food": "생크림케이크", "tags": ["디저트", "빵", "달콤한", "케이크", "파티"], "image": "https://cdn.pixabay.com/photo/2017/05/15/07/55/cake-2312129_1280.jpg"},
-  {"food": "오믈렛", "tags": ["아침식사", "계란", "부드러운", "간단한", "양식"], "image": "https://cdn.pixabay.com/photo/2017/01/31/21/15/omelette-2025156_1280.jpg"},
   {"food": "떡국", "tags": ["한식", "국물", "떡", "명절", "따뜻한"], "image": "https://cdn.pixabay.com/photo/2016/02/27/16/24/soup-1227032_1280.jpg"}
+
 
 ]
