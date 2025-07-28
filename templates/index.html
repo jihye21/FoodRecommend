@@ -10,13 +10,13 @@
     <form method="POST">
         {% for food in foods %}
             <label>
-                <input type="checkbox" name="foods" value = "{{ food }}"
+                <input type="checkbox" name="foods" value = "{{ food['food'] }}"
                 {% if food in selected_foods %}checked{% endif %}>
-                {{ food.food }}
+                {{ food['food'] }}
                 <img src="{{ url_for('static', filename=food.image) }}" alt="{{ food.food }}" style="width:50px; height:50px; object-fit:cover; vertical-align: middle; margin-left:10px;">
             </label><br>
         {% endfor %}
-        <button type = "submit">추천 받기</button>
+        <button type = "submit">추천</button>
     </form>
 
     {% if recommendations %}
@@ -27,5 +27,10 @@
                 {% endfor %}
         </ul>
     {% endif %}
+
+    <form method="GET" action="/reset">
+    <button type="submit">초기화</button>
+</form>
+
 </body>
 </html>

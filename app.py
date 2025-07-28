@@ -1,11 +1,13 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
 import json
 import random
+import os
 
 with open("sample_recipes.json", "r", encoding="utf-8") as f:
     foods = json.load(f)
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 
 NUM_RANDOM_OPTIONS = 5
 
@@ -16,46 +18,60 @@ def jaccard_similarity(set1, set2):
 
 def get_tags(food_name, foods):
     for f in foods:
+        
         if f["food"] == food_name:
-            print(f"[get_tags] 찾음: {food_name} → 태그: {f['tags']}")
             return set(f["tags"])
     return set()
 
+
 def recommend_foods(favorite_foods, foods, top_n=5):
     user_tags = set()
-    for food in favorite_foods:
-        user_tags |= get_tags(food, foods)
+    for food_name in favorite_foods:
+        user_tags |= get_tags(food_name, foods)
+
+    favorite_food_names = set(favorite_foods)
 
     scores = []
     for f in foods:
-        if f["food"] in favorite_foods:
+        if f["food"] in favorite_food_names:
             continue
 
-        print(f"[비교 대상] {f['food']} 태그: {f['tags']}")
-        print("교집합:", user_tags & set(f["tags"]))
-        print("유사도:", jaccard_similarity(user_tags, set(f["tags"])))
-        print("선택한 항목: ", user_tags )
         score = jaccard_similarity(user_tags, set(f["tags"]))
-       
         scores.append((f["food"], score))
 
     scores.sort(key=lambda x: x[1], reverse=True)
     return scores[:top_n]
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
-    recommendations=[]
-    selected_foods=[]
+    if "history" not in session:
+        session["history"] = []
 
-    if request.method =="POST":
-        selected_foods = request.form.getlist("foods")
-        recommendations = recommend_foods(selected_foods, foods)
-        displayed_foods =  [f for f in foods if f["food"] in selected_foods]   
-    else:
-        #GET
+    if request.method == "POST":
+        selected = request.form.getlist("foods")
+        session["history"] += selected  # 선택한 음식 누적
+        # 중복 제거
+        session["history"] = list(set(session["history"]))
+
+        recommendations = recommend_foods(session["history"], foods)
         displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)
-    
-    return render_template("index.html", foods=displayed_foods, recommendations=recommendations, selected_foods=selected_foods)
+
+    else:
+        displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)
+        recommendations = []
+        selected = []
+
+    return render_template("index.html",
+                           foods=displayed_foods,
+                           recommendations=recommendations,
+                           selected_foods=session.get("history", []))
+
+@app.route("/reset", methods=["GET"])
+def reset_session():
+    session.clear()
+    return redirect(url_for("index"))
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)
