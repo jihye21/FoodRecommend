@@ -62,7 +62,8 @@
                 <input type="checkbox" name="foods" value = "{{ food['food'] }}"
                 {% if food in selected_foods %}checked{% endif %}>
                 {{ food['food'] }}
-                <img src="{{ url_for('static', filename=food.image) }}" alt="{{ food.food }}" style="width:50px; height:50px; object-fit:cover; vertical-align: middle; margin-left:10px;">
+                <!--img src="{{ url_for('static', filename=food.image) }}" alt="{{ food.food }}" style="width:50px; height:50px; object-fit:cover; vertical-align: middle; margin-left:10px;"-->
+                <img src="{{ food.image }}" alt="{{ food.food }}" style="width:300px; object-fit:cover; vertical-align: middle; margin-left:10px;">
             </label><br>
         {% endfor %}
         <button type = "submit">추천</button>
