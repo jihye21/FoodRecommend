@@ -9,7 +9,7 @@ with open("sample_recipes.json", "r", encoding="utf-8") as f:
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-NUM_RANDOM_OPTIONS = 5
+NUM_RANDOM_OPTIONS = 200
 
 def jaccard_similarity(set1, set2):
     intersection = len(set1 & set2)
@@ -24,7 +24,7 @@ def get_tags(food_name, foods):
     return set()
 
 
-def recommend_foods(favorite_foods, foods, top_n=5):
+def recommend_foods(favorite_foods, foods, top_n=100):
     user_tags = set()
     for food_name in favorite_foods:
         user_tags |= get_tags(food_name, foods)
@@ -55,7 +55,7 @@ def index():
         session["history"] = list(set(session["history"]))
 
         recommendations = recommend_foods(session["history"], foods)
-        displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)
+        displayed_foods = random.sample(foods, 5)
 
     else:
         displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang ="ko">
 <head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>메뉴 추천</title>
@@ -51,13 +54,54 @@
         font-size: 0.95rem;
       }
     }
+
+    .swiper-container {
+      height: 300px; 
+      overflow: hidden;
+    }
+
+    .swiper-slide {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%; /* 세로 중앙 */
+      width: 44px;  /* 기본 Swiper 버튼 크기 */
+      height: 44px;
+      margin-top: -22px; /* 버튼 높이 절반만큼 위로 이동해 세로 중앙 맞춤 */
+      z-index: 10;
+      cursor: pointer;
+      color: #000; /* 버튼 색깔 */
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .swiper-button-prev {
+      left: 10px; /* 좌측 끝 */
+    }
+
+    .swiper-button-next {
+      right: 10px; /* 우측 끝 */
+    }
   </style>
 </head>
-    
+
 <body>
     <h1>좋아하는 음식을 골라주세요</h1>
     <form method="POST">
+      <div class="swiper-container swiper-vertical" >
+      <div class="swiper-wrapper">
         {% for food in foods %}
+        <div class="swiper-slide">
             <label>
                 <input type="checkbox" name="foods" value = "{{ food['food'] }}"
                 {% if food in selected_foods %}checked{% endif %}>
@@ -65,17 +109,39 @@
                 <!--img src="{{ url_for('static', filename=food.image) }}" alt="{{ food.food }}" style="width:50px; height:50px; object-fit:cover; vertical-align: middle; margin-left:10px;"-->
                 <img src="{{ food.image }}" alt="{{ food.food }}" style="width:300px; height:300px; object-fit:cover; vertical-align: middle; margin-left:10px;">
             </label><br>
+        </div>
         {% endfor %}
+      </div>
+    </div>
         <button type = "submit">추천</button>
     </form>
 
     {% if recommendations %}
         <h2>추천 메뉴</h2>
         <ul>
+          <div class="swiper-container swiper-horizontal" style="width: 100%; height: 100%;">
+          <div class="swiper-wrapper">
             {% for food, score in recommendations %}
+                <div class="swiper-slide">
                 <li>{{ food }} (유사도: {{ '%.5f'|format(score) }})</li>
-                {% endfor %}
+                
+            <iframe 
+                src="https://map.naver.com/p/search/{{food}}"
+                width="100%" 
+                height="600px" 
+                frameborder="0"
+                allowfullscreen
+                title="네이버지도 {{food}} 검색 결과">
+            </iframe>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         </ul>
+
     {% endif %}
 
     <form method="GET" action="/reset">
@@ -84,3 +150,26 @@
 
 </body>
 </html>
+
+<script>
+  const swiperVertical  = new Swiper('.swiper-vertical', {
+    direction: 'vertical',
+    mousewheel: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true
+  });
+
+  const swiperHorizontal  = new Swiper('.swiper-horizontal', {
+    direction: 'horizontal', // 좌우 슬라이드
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
