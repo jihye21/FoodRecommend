@@ -9,106 +9,101 @@
   <title>메뉴 추천</title>
   <style>
     body {
-      font-family: sans-serif;
-      padding: 1rem;
-      max-width: 600px;
-      margin: auto;
-    }
+    font-family: sans-serif;
+    padding: 1rem;
+    margin: auto;
+  }
 
-    label {
-      display: block;
-      margin-bottom: 1rem;
-    }
+ h1,h2{
+  min-width: 374px;
+  text-align: center;
+ }
 
-    img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      vertical-align: middle;
-      margin-left: 10px;
-      border-radius: 8px;
-    }
+ text{
+  min-width: 70px;
+ }
 
-    button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      border-radius: 6px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
+ p{
+  min-width: 200px;
+ }
 
-    ul {
-      padding-left: 1rem;
-    }
+img {
+  object-fit: cover;
+  vertical-align: middle;
+  border-radius: 8px;
+  width:300px; 
+  height:300px; 
+}
 
-    @media (max-width: 500px) {
-      img {
-        width: 40px;
-        width: 40px;
-      }
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
 
-      body {
-        font-size: 0.95rem;
-      }
-    }
+ul {
+  padding-left: 1rem;
+  min-width: 320px;
+}
 
-    .swiper-container {
-      height: 300px; 
-      overflow: hidden;
-    }
+.swiper-container.swiper-vertical {
+  height: 300px;
+  overflow: hidden;
+  display: flex;    
+  text-align: center;
+}
 
-    .swiper-slide {
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.swiper-slide.swiper-vertical {
+  height: 300px;
+}
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: absolute;
-      top: 50%; /* 세로 중앙 */
-      width: 44px;  /* 기본 Swiper 버튼 크기 */
-      height: 44px;
-      margin-top: -22px; /* 버튼 높이 절반만큼 위로 이동해 세로 중앙 맞춤 */
-      z-index: 10;
-      cursor: pointer;
-      color: #000; /* 버튼 색깔 */
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    }
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50%; 
+  width: 44px;  
+  height: 44px;
+  margin-top: -22px; 
+  z-index: 10;
+  cursor: pointer;
+  color: #000; /* 버튼 색깔 */
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
 
-    .swiper-button-prev {
-      left: 10px; /* 좌측 끝 */
-    }
+.iframe-wrapper{
+  height: 600px; 
+  margin-right: 60px; 
+  margin-left: 60px;
+}
 
-    .swiper-button-next {
-      right: 10px; /* 우측 끝 */
-    }
+.swiper-container.swiper-horizontal{
+  overflow: hidden;
+}
+
   </style>
 </head>
 
 <body>
-    <h1>좋아하는 음식을 골라주세요</h1>
+    <h2>좋아하는 음식을 골라주세요</h2>
     <form method="POST">
       <div class="swiper-container swiper-vertical" >
       <div class="swiper-wrapper">
         {% for food in foods %}
         <div class="swiper-slide">
-            <label>
                 <input type="checkbox" name="foods" value = "{{ food['food'] }}"
                 {% if food in selected_foods %}checked{% endif %}>
                 {{ food['food'] }}
                 <!--img src="{{ url_for('static', filename=food.image) }}" alt="{{ food.food }}" style="width:50px; height:50px; object-fit:cover; vertical-align: middle; margin-left:10px;"-->
-                <img src="{{ food.image }}" alt="{{ food.food }}" style="width:300px; height:300px; object-fit:cover; vertical-align: middle; margin-left:10px;">
-            </label><br>
+                <img src="{{ food.image }}" alt="{{ food.food }}">
+                <br>
         </div>
         {% endfor %}
       </div>
@@ -118,29 +113,34 @@
 
     {% if recommendations %}
         <h2>추천 메뉴</h2>
-        <ul>
-          <div class="swiper-container swiper-horizontal" style="width: 100%; height: 100%;">
+
+          <div class="swiper-container swiper-horizontal">
           <div class="swiper-wrapper">
             {% for food, score in recommendations %}
                 <div class="swiper-slide">
-                <li>{{ food }} (유사도: {{ '%.5f'|format(score) }})</li>
-                
-            <iframe 
-                src="https://map.naver.com/p/search/{{food}}"
-                width="100%" 
-                height="600px" 
-                frameborder="0"
-                allowfullscreen
-                title="네이버지도 {{food}} 검색 결과">
-            </iframe>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <p style="text-align: center;">{{ food }} (유사도: {{ '%.5f'|format(score) }})</p>
+                <br>
+                <div class="iframe-wrapper">
+                  <iframe 
+                      src="https://map.naver.com/p/search/{{food}}"
+                      width="100%" 
+                      height="100%" 
+                      frameborder="0"
+                      allowfullscreen
+                      loading = lazy
+                      title="네이버지도 {{food}} 검색 결과">
+                  </iframe>
+                </div>
+                <a href="https://m.map.naver.com/search2/search.naver?query={{food}}" target="_blank">
+                    모바일 지도 보기
+                </a>
               </div>
             {% endfor %}
           </div>
 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
-        </ul>
 
     {% endif %}
 

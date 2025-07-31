@@ -24,7 +24,7 @@ def get_tags(food_name, foods):
     return set()
 
 
-def recommend_foods(favorite_foods, foods, top_n=100):
+def recommend_foods(favorite_foods, foods, top_n=5):
     user_tags = set()
     for food_name in favorite_foods:
         user_tags |= get_tags(food_name, foods)
@@ -55,7 +55,7 @@ def index():
         session["history"] = list(set(session["history"]))
 
         recommendations = recommend_foods(session["history"], foods)
-        displayed_foods = random.sample(foods, 5)
+        displayed_foods = random.sample(foods, 200)
 
     else:
         displayed_foods = random.sample(foods, NUM_RANDOM_OPTIONS)
