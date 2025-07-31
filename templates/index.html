@@ -4,6 +4,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Font Awesome CDN 추가 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>메뉴 추천</title>
@@ -78,6 +81,18 @@ ul {
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  content: '';          /* 기본 화살표 아이콘을 없앰 */
+  border: none;         /* 경계선 제거 */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';          /* 기본 화살표 아이콘을 없앰 */
+  border: none;         /* 경계선 제거 */
+}
+
 .iframe-wrapper{
   height: 600px; 
   margin-right: 60px; 
@@ -86,6 +101,27 @@ ul {
 
 .swiper-container.swiper-horizontal{
   overflow: hidden;
+}
+
+.mobile-link {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .iframe {
+        display: none;
+    }
+
+    .mobile-link {
+        display: block;
+        text-align: center;
+    }
+
+    .iframe-wrapper{
+      height: 100px; 
+      margin-right: 60px; 
+      margin-left: 60px;
+    }
 }
 
   </style>
@@ -118,8 +154,8 @@ ul {
           <div class="swiper-wrapper">
             {% for food, score in recommendations %}
                 <div class="swiper-slide">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
                 <p style="text-align: center;">{{ food }} (유사도: {{ '%.5f'|format(score) }})</p>
                 <br>
                 <div class="iframe-wrapper">
@@ -130,12 +166,13 @@ ul {
                       frameborder="0"
                       allowfullscreen
                       loading = lazy
-                      title="네이버지도 {{food}} 검색 결과">
+                      title="네이버지도 {{food}} 검색 결과"
+                      class="iframe">
                   </iframe>
+                  <a href="https://m.map.naver.com/search2/search.naver?query={{food}}" target="_blank" class="mobile-link">
+                    {{ food }} 지도에서 보기
+                  </a>
                 </div>
-                <a href="https://m.map.naver.com/search2/search.naver?query={{food}}" target="_blank">
-                    모바일 지도 보기
-                </a>
               </div>
             {% endfor %}
           </div>
